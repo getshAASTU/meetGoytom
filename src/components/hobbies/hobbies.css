@@ -1,0 +1,111 @@
+.hobbies-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+.hobbies{
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.hobby{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -1rem;
+}
+.hobbyImg{
+  border-radius: 8px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.hobbyTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    font-size: 3rem;
+}
+.hobby-icon{
+  color: var(--primary-500);
+  font-size: 5rem;
+}
+.hobbyTitle h3{
+  color:rgb(20, 20, 20);
+}
+.hobbyText{
+  transform: translateX(150px);
+  opacity: 0;
+}
+.hobbyText p{
+  color: var(--black);
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+.hobbyTextAnimate{
+  opacity: 1;
+  transform: translateX(0);
+  transition: all ease-in-out 2s;
+
+}
+.img-container{
+  transform: translateX(-150px);
+  opacity: 0;
+}
+.hobbyImgAnimate{
+  opacity: 1;
+  transform: translateX(0);
+  transition: all ease-in-out 3s;
+
+}
+.hobby h5{
+  color: rgb(20,20,20);
+  font-weight: bold;
+  padding-top: 0.7rem;
+}
+
+.hobbyText::-webkit-scrollbar {
+  width: 2px;
+}
+
+.hobbyText::-webkit-scrollbar-track {
+  width: 1px;
+  border-radius: 6px;
+}
+
+.hobbyText::-webkit-scrollbar-thumb {
+  width: 3px;
+  border-radius: 6px;
+  background-color: var(--primary-600);
+}
+@media screen and (max-width:768px) {
+  .hobbies-container{
+    margin-top: 55rem;
+  }
+  
+}
+@media screen and (min-width:992px) {
+  .hobby{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .hobbyText{
+    margin-left: -4rem;
+    width: 40%;
+    height: 250px;
+    overflow-y: scroll;
+  }
+  .img-container{
+    width: 40%;
+    margin-right: 2rem;
+  }
+  .hobbyImg{
+    width: 100%;
+  }
+  .sportsImg{
+    height: 75%;
+  }
+}
